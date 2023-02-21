@@ -116,7 +116,7 @@ def predict(file_path):
                 output, text, (35, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.25, (0, 255, 0), 5
             )
         readendtime = time.time()
-        print("Time to read: ", readendtime - readtime)
+    #    print("Time to read: ", readendtime - readtime)
 
         # output_vid = "/output" + file_path.split("/")[-1][:-4] + "--output.mp4"
 
