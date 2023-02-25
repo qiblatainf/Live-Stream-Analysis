@@ -5,6 +5,7 @@ const livekit = require('livekit-client');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const WebSocket = require('ws');
+const JWT = require('jsonwebtoken');
 
 // sets up web environment
 const dom = new JSDOM();
