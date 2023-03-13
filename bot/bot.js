@@ -1,11 +1,15 @@
 url = "wss://sadiq.livekit.cloud"
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlbyI6eyJyb29tIjoic3RyZWFtZXIiLCJyb29tSm9pbiI6dHJ1ZSwiY2FuU3Vic2NyaWJlIjp0cnVlLCJjYW5QdWJsaXNoIjpmYWxzZSwiY2FuUHVibGlzaERhdGEiOmZhbHNlfSwiaWF0IjoxNjc2OTkxMDE0LCJuYmYiOjE2NzY5OTEwMTQsImV4cCI6MTY3NzAxMjYxNCwiaXNzIjoiQVBJY0ZnRHBMdUEyOVRnIiwic3ViIjoidmlld2VyIiwianRpIjoidmlld2VyIn0.q9JDNxdbWpPqRgk5xcFl2D1hIGVQBwB5ID-XhLnWx9k"
+json_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlbyI6eyJyb29tIjoic3RyZWFtZXIiLCJyb29tSm9pbiI6dHJ1ZSwiY2FuU3Vic2NyaWJlIjp0cnVlLCJjYW5QdWJsaXNoIjpmYWxzZSwiY2FuUHVibGlzaERhdGEiOmZhbHNlfSwiaWF0IjoxNjc2OTkxMDE0LCJuYmYiOjE2NzY5OTEwMTQsImV4cCI6MTY3NzAxMjYxNCwiaXNzIjoiQVBJY0ZnRHBMdUEyOVRnIiwic3ViIjoidmlld2VyIiwianRpIjoidmlld2VyIn0.q9JDNxdbWpPqRgk5xcFl2D1hIGVQBwB5ID-XhLnWx9k"
 
+const jwt_decode = require('jwt-decode');
 const livekit = require('livekit-client');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-const WebSocket = require('ws');
-const JWT = require('jsonwebtoken');
+const WebSocket = require('wss');
+
+console.log(token);
+
+
 
 // sets up web environment
 const dom = new JSDOM();
@@ -48,5 +52,5 @@ ws.on('open', () => {
   }
 });
 
-// console.log('connected to room', room.name);
+console.log('connected to room', room.name);
   
